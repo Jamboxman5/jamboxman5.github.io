@@ -8,8 +8,8 @@ function submit() {
   var gasMileage = milesDrivenInput / gasVolumeInput;
   var costPerMile = gasPriceInput / milesDrivenInput;
 
-  response.innerHTML = `Fuel Economy for the last ${milesDrivenInput} miles: ${gasMileage}mi/G`;
-  response.innerHTML += `Gas Cost per Mile for the last ${milesDrivenInput} miles: $${costPerMile}`;
+  response.innerHTML = `Fuel Economy for the last ${milesDrivenInput} miles: ${gasMileage.toFixed(2)}mi/G`;
+  response.innerHTML += `\nGas Cost per Mile for the last ${milesDrivenInput} miles: $${costPerMile.toFixed(2)}`;
   
 }
 
