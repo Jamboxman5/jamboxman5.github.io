@@ -5,13 +5,13 @@ function submit() {
 
   const response = document.getElementById("gasInfo");
 
-  gasMileage = milesDrivenInput / gasVolumeInput;
-  costPerMile = gasPriceInput / milesDrivenInput;
+  var gasMileage = milesDrivenInput / gasVolumeInput;
+  var costPerMile = gasPriceInput / milesDrivenInput;
 
-  response.innerHTML = `Fuel Economy for the last ${milesDrivenInput} miles: ${gasMileage}mi/G \n
-                        Gas Cost per Mile for the last ${milesDrivenInput} miles: $${costPerMile}`;
+  response.innerHTML = `Fuel Economy for the last ${milesDrivenInput} miles: ${gasMileage}mi/G`;
+  response.innerHTML += `Gas Cost per Mile for the last ${milesDrivenInput} miles: $${costPerMile}`;
   
 }
 
 const button = document.getElementById("submitButton");
-button.addEventListener('click', sumbit);
+button.addEventListener('click', submit);
