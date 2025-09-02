@@ -1,12 +1,12 @@
 function submit() {
-  const plateInput = document.getElementById("plateNo").value;
+  const plateInput = document.getElementById("plateNo").value.toUpperCase();
   const gasVolumeInput = document.getElementById("gasVolume").value;
   const gasPriceInput = document.getElementById("gasPrice").value;
   const milesDrivenInput = document.getElementById("milesDriven").value;
 
   const date = new Date();
   const day = date.getDay();
-  const month = date.getMonth();
+  const month = date.getMonth() + 1;
   const year = date.getFullYear();
 
   const response = document.getElementById("gasInfo");
