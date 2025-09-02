@@ -52,7 +52,7 @@ function createEntryList(entries) {
 
 async function sendEntry(entry) {
   try {
-    const response = await fetch("http://67.246.103.207:8080/api/entry/add", {
+    const response = await fetch("https://mc.jahcraft.cc/api/entry/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
