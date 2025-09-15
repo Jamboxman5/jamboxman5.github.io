@@ -1,14 +1,39 @@
-<html class="h-full bg-gradient-to-br from-indigo-800 to-orange-800">
-  <head>
-    <title>Boat Calculator</title>
-    <style>
-  html, body {
-    height: 100%;
-    background-attachment: fixed;
-  }
-</style>
-  </head>
-  <body class="min-h-full bg-gradient-to-br from-indigo-800 to-orange-800">
+<!doctype html>
+<html class="h-full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#4f46e5">
+  <title>Boat Calculator</title>
+
+  <style>
+    /* Ensure html/body fill the viewport and smooth scrolling on iOS */
+    html, body {
+      height: 100%;
+      margin: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+      background-color: #4f46e5; /* fallback matching the gradient start */
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;                 /* top:0; right:0; bottom:0; left:0; */
+      z-index: -1;              /* behind page content */
+      pointer-events: none;     /* doesn't block clicks */
+      background: linear-gradient(135deg, #4f46e5 0%, #fb923c 100%); /* indigo → orange */
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* helps in some browsers */
+      -webkit-transform: translateZ(0); /* force GPU compositing on iOS for stability */
+      transform: translateZ(0);
+      will-change: transform;
+    }
+  </style>
+</head>
+<body class="min-h-full">
     <div class="my-20 flex items-center justify-center px-4">
       <!-- Wider form on mobile, capped on desktop -->
       <div class="min-w-7/8 min-h-5/8 max-w-lg bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg">
