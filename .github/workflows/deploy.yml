@@ -1,4 +1,4 @@
-name: Deploy Vite App to GitHub Pages
+name: Deploy Portfolio to Github Pages
 
 on:
   push:
@@ -10,15 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - run: npm ci
       - run: npm run build
-
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: main # deploy to root of user Pages
           publish_dir: ./dist
