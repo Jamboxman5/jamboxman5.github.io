@@ -3,16 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#4f46e5">
+  <meta name="theme-color" content="#3730a3">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Boat Calculator</title>
 
   <style>
     /* Ensure html/body fill the viewport and smooth scrolling on iOS */
     html, body {
-      height: 100%;
-      margin: 0;
-      -webkit-overflow-scrolling: touch;
-    }
+  min-height: 100%;
+  background: linear-gradient(135deg, #3730a3, #fb923c); /* indigo-800 → orange-400 */
+  background-attachment: fixed;
+}
+
 
     body {
       background-color: #4f46e5; /* fallback matching the gradient start */
