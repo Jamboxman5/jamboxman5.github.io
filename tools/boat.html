@@ -11,28 +11,23 @@
     /* Ensure html/body fill the viewport and smooth scrolling on iOS */
     html, body {
   min-height: 100%;
-  background: linear-gradient(135deg, #3730a3, #fb923c); /* indigo-800 → orange-400 */
-  background-attachment: fixed;
+  margin: 0;
+  background: none; /* don't double paint */
 }
 
-
-    body {
-      background-color: #4f46e5; /* fallback matching the gradient start */
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;                 /* top:0; right:0; bottom:0; left:0; */
-      z-index: -1;              /* behind page content */
-      pointer-events: none;     /* doesn't block clicks */
-      background: linear-gradient(135deg, #4f46e5 0%, #fb923c 100%); /* indigo → orange */
-      background-repeat: no-repeat;
-      background-attachment: fixed; /* helps in some browsers */
-      -webkit-transform: translateZ(0); /* force GPU compositing on iOS for stability */
-      transform: translateZ(0);
-      will-change: transform;
-    }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(135deg, #3730a3 0%, #fb923c 100%); /* consistent colors */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
   </style>
 </head>
 <body class="min-h-full">
