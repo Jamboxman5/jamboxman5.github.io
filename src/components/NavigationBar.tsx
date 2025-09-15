@@ -38,7 +38,7 @@ export default function NavigationBar() {
 
           <button
             onClick={handleHome}
-            className="!bg-transparent hover:!bg-blue-400 text-white font-semibold py-2 px-4 rounded transition duration-200"
+            className="ml-auto !bg-transparent hover:!bg-blue-400 text-white font-semibold py-2 px-4 rounded transition duration-200"
           >
             Home
           </button>
