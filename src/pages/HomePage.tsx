@@ -21,6 +21,14 @@ export default function HomePage() {
           >
             Fuel Economy Calculator
           </button>
+          <button
+            onClick={() =>
+              (window.location.href = "/CSC495-AccommoDate-Interface/")
+            }
+            className="mt-5 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+          >
+            AccommoDate
+          </button>
         </div>
       </div>
     </div>
