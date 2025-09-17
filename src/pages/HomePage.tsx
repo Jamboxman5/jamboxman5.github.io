@@ -12,8 +12,10 @@ export default function HomePage() {
         <h1 className="text-center font-bold text-white">
           Welcome to my Portfolio!
         </h1>
-        <div className="mx-auto my-20 py-10 bg-white shadow-lg rounded-2xl p-8 max-w-md w-full text-center">
-          <p className="text-3xl font-bold text-gray-700 mb-4">My Stuff:</p>
+        <div className="mx-auto my-20 py-10 bg-gray-900 shadow-lg rounded-2xl p-8 max-w-md w-full text-center">
+          <p className="text-3xl font-plain text-gray-300 mb-4">My Stuff:</p>
+
+          <div className="flex flex-col space-y-10">
 
           <button
             onClick={() => (window.location.href = "/tools/boat.html")}
@@ -29,6 +31,10 @@ export default function HomePage() {
           >
             AccommoDate
           </button>
+
+          </div>
+
+          
         </div>
       </div>
     </div>
