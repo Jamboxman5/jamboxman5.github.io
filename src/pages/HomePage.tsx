@@ -6,8 +6,8 @@ export default function HomePage() {
     document.title = "Home - Sam Thompson's Portfolio";
   });
   return (
-    <div className="">
-      <div className="w-screen bg-gradient-to-br from-indigo-800 to-orange-800 pt-40 min-h-screen">
+    <div className="min-h-screen">
+      <div className="w-screen bg-gradient-to-br from-indigo-800 to-orange-800 pt-40 pb-40 min-h-screen">
         <NavigationBar />
         <h1 className="text-center font-bold text-white">
           Welcome to my Portfolio!
