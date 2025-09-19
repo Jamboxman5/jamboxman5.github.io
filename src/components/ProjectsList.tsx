@@ -29,7 +29,15 @@ export default function ProjectsList() {
                       href="https://github.com/Jamboxman5/CSC495-AccommoDate-API"
                       className="block px-4 py-2 hover:bg-gray-800 text-white dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      AccommoDate
+                      AccommoDate (API)
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/Jamboxman5/CSC495-AccommoDate-Interface"
+                      className="block px-4 py-2 hover:bg-gray-800 text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      AccommoDate (Interface)
                     </a>
                   </li>
                   <li>
