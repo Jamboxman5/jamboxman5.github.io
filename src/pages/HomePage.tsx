@@ -21,7 +21,7 @@ export default function HomePage() {
           <div className="flex flex-col space-y-4">
             <button
               onClick={() => (window.location.href = "/tools/boat.html")}
-              className="mt-5 bg-gradient-to-t from-purple-800 to-indigo-800 hover:!bg-blue-600 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200"
+              className="mt-5 bg-gradient-to-t from-indigo-800 to-indigo-800 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:from-purple-800 hover:to-indigo-800 hover:ring-2 hover:ring-white ring-offset-1"
             >
               Fuel Economy Calculator
             </button>
@@ -29,7 +29,7 @@ export default function HomePage() {
               onClick={() =>
                 (window.location.href = "/CSC495-AccommoDate-Interface/")
               }
-              className="mt-5 bg-gradient-to-t from-purple-800 to-indigo-800 hover:!bg-blue-600 text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200"
+              className="mt-5 bg-gradient-to-t from-indigo-800 to-indigo-800 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:from-purple-800 hover:to-indigo-800 hover:ring-2 hover:ring-white ring-offset-1"
             >
               AccommoDate
             </button>
