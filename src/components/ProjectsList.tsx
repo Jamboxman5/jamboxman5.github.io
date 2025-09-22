@@ -32,14 +32,14 @@ export default function ProjectsList() {
 
       {dropdownActive && (
         <div
-          className="absolute mt-2 bg-gray-900 divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
+          className="absolute mt-2 bg-gray-800 divide-y divide-gray-100 rounded-lg shadow-sm w-44"
           onMouseLeave={() => setDropDownActive(false)}
         >
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC495-AccommoDate-API"
-                className="block px-4 py-2 hover:bg-gray-800 text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
                 AccommoDate (API)
               </a>
@@ -47,7 +47,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC495-AccommoDate-Interface"
-                className="block px-4 py-2 hover:bg-gray-800 text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
                 AccommoDate (Interface)
               </a>
@@ -55,7 +55,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC344-Turing-Machine-Simulation"
-                className="block px-4 py-2 hover:bg-gray-800 text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Turing Machine Simulation
               </a>
@@ -63,7 +63,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC454-Factory-Simulation"
-                className="block px-4 py-2 hover:bg-gray-800 text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Drill / Press Simulation
               </a>
@@ -71,7 +71,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC344-Logical-Reduction"
-                className="block px-4 py-2 hover:bg-gray-800 text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Logical Reduction (Clojure)
               </a>
@@ -79,7 +79,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC322-Dungeon-Crawler-Game"
-                className="block px-4 py-2 hover:bg-gray-800 text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Dungeon Crawler
               </a>
@@ -87,7 +87,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC344-Shell-Regex"
-                className="block px-4 py-2 hover:bg-gray-800 text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Shell / Regex / Mail Parser
               </a>

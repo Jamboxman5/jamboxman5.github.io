@@ -32,14 +32,14 @@ export default function ToolsList() {
 
       {dropdownActive && (
         <div
-          className="absolute mt-2 bg-gray-900 divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
+          className="absolute mt-2 bg-gray-800 divide-y divide-gray-100 rounded-lg shadow-sm w-44"
           onMouseLeave={() => setDropDownActive(false)}
         >
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
             <li>
               <a
                 href="https://jamboxman5.github.io/tools/boat.html"
-                className="block px-4 py-2 hover:bg-gray-800 text-white dark:hover:bg-gray-600 dark:hover:text-white"
+                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Boat Calculator
               </a>
