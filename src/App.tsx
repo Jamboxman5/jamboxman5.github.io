@@ -10,7 +10,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/plugins" element={<SpigotPage />} />
-        <Route path="/tools/fueleco" element={<BoatCalculatorPage />} />
+        <Route path="/reacttools/fueleco" element={<BoatCalculatorPage />} />
 
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
