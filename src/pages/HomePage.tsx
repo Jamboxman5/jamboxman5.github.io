@@ -1,10 +1,15 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import NavigationBar from "../components/NavigationBar";
 
 export default function HomePage() {
   useEffect(() => {
     document.title = "Home - Sam Thompson's Portfolio";
   });
+
+    const navigate = useNavigate();
+
+
   return (
     <div className="min-h-screen">
       <div className="w-screen bg-gradient-to-br from-indigo-800 to-orange-800 pt-40 pb-40 min-h-screen">
@@ -20,14 +25,14 @@ export default function HomePage() {
 
           <div className="flex flex-col space-y-4">
             <button
-              onClick={() => (window.location.href = "/reacttools/fueleco")}
+              onClick={() => navigate("/reacttools/fueleco")}
               className="mt-5 bg-gradient-to-t from-indigo-800 to-indigo-800 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:from-purple-800 hover:to-indigo-800 hover:ring-2 hover:ring-white ring-offset-1"
             >
               Fuel Economy Calculator
             </button>
             <button
               onClick={() =>
-                (window.location.href = "/CSC495-AccommoDate-Interface/")
+                (window.location.href = "/CSC495-AccommoDate-Interface/#/")
               }
               className="mt-5 bg-gradient-to-t from-indigo-800 to-indigo-800 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:from-purple-800 hover:to-indigo-800 hover:ring-2 hover:ring-white ring-offset-1"
             >
