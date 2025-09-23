@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=/" />
+    <meta charset="UTF-8" />
+    <title>Page Not Found</title>
+    <script type="text/javascript">
+      (function() {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        window.location.replace('/index.html?' + path + search + hash);
+      })();
+    </script>
   </head>
-  <body></body>
+  <body>
+    <h1>Redirecting...</h1>
+  </body>
 </html>
