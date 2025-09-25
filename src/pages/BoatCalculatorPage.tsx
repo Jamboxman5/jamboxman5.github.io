@@ -149,6 +149,16 @@ export default function BoatCalculatorPage() {
             {gasInfo && (
               <p className="mt-4 text-center text-white font-medium whitespace-pre-line">
                 {gasInfo}
+                {entries.length > 0 && (() => {
+                  const totalMiles = entries.reduce((sum, e) => sum + e.miles, 0);
+                  const totalGallons = entries.reduce((sum, e) => sum + e.gallons, 0);
+                  const avgMileage = totalMiles / totalGallons;
+                  return (
+                    <div className="mt-4 font-bold text-xl text-center">
+                      Average Fuel Economy: {avgMileage.toFixed(2)} mi/G
+                    </div>
+                  );
+                })()}
               </p>
             )}
 
