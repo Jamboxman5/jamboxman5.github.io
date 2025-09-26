@@ -9,6 +9,7 @@ export default function ToolsList() {
         onFocus={() => setDropDownActive(true)}
         onBlur={() => setDropDownActive(false)}
         onMouseEnter={() => setDropDownActive(true)}
+        onClick={() => setDropDownActive(!dropdownActive)}
         className="!bg-transparent hover:!bg-indigo-800 text-white !text-lg font-semibold py-2 px-4 rounded transition duration-200 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex items-center"
         type="button"
       >
