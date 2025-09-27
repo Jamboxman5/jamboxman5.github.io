@@ -1,7 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ToolsList() {
   const [dropdownActive, setDropDownActive] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleBoatCalculator = () => {
+    navigate("/reacttools/fueleco")
+  }
 
   return (
     <div>
@@ -38,12 +45,12 @@ export default function ToolsList() {
         >
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
             <li>
-              <a
-                href="https://jamboxman5.github.io/tools/boat.html"
+              <button
+                onClick={handleBoatCalculator}
                 className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
-                Boat Calculator
-              </a>
+                Fuel Economy Tracker
+              </button>
             </li>
           </ul>
         </div>

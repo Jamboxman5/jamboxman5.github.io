@@ -16,7 +16,7 @@ export default function NavigationBar() {
         <ul className="flex space-x-7 py-5">
           <button
             onClick={handleHome}
-            className="!bg-transparent hover:!bg-gray-800 text-white font-semibold py-2 px-4 rounded transition duration-200"
+            className="!bg-transparent hover:!bg-gray-800 text-white text-lg font-semibold py-2 px-4 rounded transition duration-200"
           >
             Home
           </button>
