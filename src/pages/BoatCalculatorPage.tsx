@@ -168,7 +168,7 @@ export default function BoatCalculatorPage() {
                 return (
                   <div key={idx}>
                     {entry.month}/{entry.day}/{entry.year} | Drove {entry.miles} miles | Paid $
-                    {entry.cost} for {entry.gallons} gallons |{" "}
+                    {entry.cost} for {entry.gallons} gallons |{"  "}
                     {gasMileage.toFixed(2)} mi/G
                   </div>
                 );
