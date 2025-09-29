@@ -13,6 +13,30 @@ export default function BoatCalculatorPage() {
     document.title = "Fuel Economy Tracker";
   }, []);
 
+  const getAverageFuelMonth = () => {
+    var miles = 0;
+    var gallons = 0;
+    for (const entry of entries) {
+      if (entry.month == (new Date().getMonth() + 1) && entry.year == new Date().getFullYear()) {
+        miles += entry.miles;
+        gallons += entry.gallons;
+      }
+    }
+    return (miles/gallons);
+  }
+
+  const getAverageFuelYear = () => {
+    var miles = 0;
+    var gallons = 0;
+    for (const entry of entries) {
+      if (entry.year == new Date().getFullYear()) {
+        miles += entry.miles;
+        gallons += entry.gallons;
+      }
+    }
+    return (miles/gallons);
+  }
+
   const handleSubmission = async () => {
     const plateInput = plateNo.toUpperCase();
     const gasVolumeInput = parseFloat(gasVolume);
@@ -140,27 +164,37 @@ export default function BoatCalculatorPage() {
 
               <button
                 type="submit"
-                className="mt-10 w-full py-4 px-4 bg-blue-600 text-white text-2xl font-semibold rounded-lg shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              >
+                className="mt-6 w-full py-4 px-4 bg-gradient-to-t from-indigo-800 to-indigo-800 text-white text-xl font-bold rounded-lg transition-all duration-300 hover:from-purple-800 hover:to-indigo-800 hover:ring-2 hover:ring-white ring-offset-1"
+>
                 Submit
               </button>
             </form>
 
             {gasInfo && (
-              <p className="mt-4 text-center text-white font-medium whitespace-pre-line">
+              <div className="mt-4 text-center text-white font-semibold text-xl py-2 whitespace-pre-line">
                 {gasInfo}
                 {entries.length > 0 && (() => {
                   const totalMiles = entries.reduce((sum, e) => sum + e.miles, 0);
                   const totalGallons = entries.reduce((sum, e) => sum + e.gallons, 0);
                   const avgMileage = totalMiles / totalGallons;
                   return (
-                    <div className="mt-4 font-bold text-xl text-center">
-                      Average Fuel Economy: {avgMileage.toFixed(2)} mi/G
+                    <div className="mt-4 text-center text-white font-medium whitespace-pre-line">
+                      {entries && (
+                        <p className="mt-4 text-left text-white font-semibold text-xl py-8 whitespace-pre-line">
+                          Average Fuel Economy (All Time): {avgMileage.toFixed(2)} mi/G
+                          <br/>
+                          Average Fuel Economy (Month): {getAverageFuelMonth().toFixed(2)} mi/G
+                          <br/>
+                          Average Fuel Economy (Year): {getAverageFuelYear().toFixed(2)} mi/G
+                        </p>
+                      )}                    
                     </div>
                   );
                 })()}
-              </p>
+              </div>
             )}
+
+            
 
             <div id="entryList" className="mt-6 space-y-2 text-white">
               {entries.map((entry, idx) => {
