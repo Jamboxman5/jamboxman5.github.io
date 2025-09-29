@@ -4,7 +4,7 @@ import JahSkills from "../components/plugins/JahSkills";
 import WesternBounties from "../components/plugins/WesternBounties";
 import WesternHunting from "../components/plugins/WesternHunting";
 import SixPocketShop from "../components/plugins/SixPocketShop";
-import spigotPng from '/spigot.png'; // Relative path from your component
+import spigotPng from '/spigot.png';
 
 export default function SpigotPage() {
   useEffect(() => {
