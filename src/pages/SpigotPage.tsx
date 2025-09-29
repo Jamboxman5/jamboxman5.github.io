@@ -21,6 +21,26 @@ export default function SpigotPage() {
             Spigot API, Vault API, and various other dependencies. Some of these were developed with public use in mind,
             others specifically to be used by my own server, and are tailored as such.
           </p>
+          <div className="flex flex-row mx-auto w-1/3 mt-12">
+            <button
+                onClick={() =>
+                  (window.location.href =
+                    "https://hub.spigotmc.org/stash/projects/SPIGOT")
+                }
+                className="mx-auto bg-gradient-to-t from-indigo-900 to-indigo-900 text-white font-medium text-lg py-4 w-7/16 rounded-2xl transition-all duration-300 hover:from-purple-900 hover:to-indigo-900 hover:ring-2 hover:ring-white ring-offset-1"
+              >
+                Spigot Repo
+              </button>
+              <button
+                onClick={() =>
+                  (window.location.href =
+                    "https://hub.spigotmc.org/javadocs/bukkit/")
+                }
+                className="mx-auto bg-gradient-to-t from-indigo-900 to-indigo-900 text-white font-medium text-lg py-4 w-7/16 rounded-2xl transition-all duration-300 hover:from-purple-900 hover:to-indigo-900 hover:ring-2 hover:ring-white ring-offset-1"
+              >
+                Spigot JavaDocs
+              </button>
+          </div>
         </div>
 
         <div className="flex flex-wrap space-x-10 space-y-10 my-10">
