@@ -134,7 +134,11 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
         
+        <div className="w-full bg-gray-900 min-h-[400px] mt-20">
+          <p className="text-white font-bold text-center text-3xl pt-10">Featured Projects</p>
+        </div>
       </div>
     </div>
   );
