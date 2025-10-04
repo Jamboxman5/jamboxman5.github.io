@@ -138,6 +138,17 @@ export default function HomePage() {
         
         <div className="w-full bg-gray-900 min-h-[400px] mt-20">
           <p className="text-white font-bold text-center text-3xl pt-10">Featured Projects</p>
+          <div className="flex flex-wrap w-full mt-8 min-h-[240px]">
+            <div className="w-7/24 text-center bg-gray-700 mx-auto rounded-2xl">
+              <p className="text-gray-200 font-medium text-2xl text-center pt-[100px]">AccommoDate</p>
+            </div>
+            <div className="w-7/24 text-center bg-gray-700 mx-auto rounded-2xl">
+              <p className="text-gray-200 font-medium text-2xl text-center pt-[100px]">CheckMate</p>
+            </div>
+            <div className="w-7/24 text-center bg-gray-700 mx-auto rounded-2xl">
+              <p className="text-gray-200 font-medium text-2xl text-center pt-[100px]">ABNPGame</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
