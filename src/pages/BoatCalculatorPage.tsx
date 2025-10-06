@@ -204,7 +204,7 @@ export default function BoatCalculatorPage() {
 
             <table
               id="entryList"
-              className="mt-6 space-y-2 text-white w-full font-thin text-base sm:text-[23px] xs:text-[16px] md:text-xl"
+              className="mt-6 space-y-2 text-white w-full font-thin text-base md:text-[20px] lg:text-[20px] xl:text-[20px] text-[10px]"
             >
               {entries.map((entry, idx) => {
                 const gasMileage = entry.miles / entry.gallons;
