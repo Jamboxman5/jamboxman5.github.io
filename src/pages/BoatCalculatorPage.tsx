@@ -180,13 +180,21 @@ export default function BoatCalculatorPage() {
                   return (
                     <div className="mt-4 text-center text-white font-medium whitespace-pre-line">
                       {entries && (
-                        <p className="mt-4 text-left text-white font-semibold text-xl py-8 whitespace-pre-line">
-                          Average Fuel Economy (All Time): {avgMileage.toFixed(2)} mi/G
-                          <br/>
-                          Average Fuel Economy (Month): {getAverageFuelMonth().toFixed(2)} mi/G
-                          <br/>
-                          Average Fuel Economy (Year): {getAverageFuelYear().toFixed(2)} mi/G
-                        </p>
+                        <table className="my-6 text-left text-white font-normal text-xl py-8 whitespace-pre-line w-full">
+                          <tr>
+                            <td>Average Fuel Economy (All Time): </td>
+                            <td className="text-right font-medium">{avgMileage.toFixed(2)} mi/G</td>
+                          </tr>
+                          <tr>
+                            <td>Average Fuel Economy (Month): </td>
+                            <td className="text-right font-medium">{getAverageFuelMonth().toFixed(2)} mi/G</td>
+                          </tr>
+                          <tr>
+                            <td>Average Fuel Economy (Year): </td>
+                            <td className="text-right font-medium">{getAverageFuelYear().toFixed(2)} mi/G</td>
+                          </tr>
+                        </table>
+
                       )}                    
                     </div>
                   );
@@ -196,18 +204,19 @@ export default function BoatCalculatorPage() {
 
             
 
-            <div id="entryList" className="mt-6 space-y-2 text-white">
+            <table id="entryList" className="mt-6 space-y-2 text-white w-full text-lg font-thin">
               {entries.map((entry, idx) => {
                 const gasMileage = entry.miles / entry.gallons;
                 return (
-                  <div key={idx}>
-                    {entry.month}/{entry.day}/{entry.year} | Drove {entry.miles} miles | Paid $
-                    {entry.cost} for {entry.gallons} gallons |{"  "}
-                    {gasMileage.toFixed(2)} mi/G
-                  </div>
+                  <tr key={idx} className="w-full">
+                    <td className="font-medium">{entry.month}/{entry.day}/{entry.year}</td>
+                    <td>Drove {entry.miles} Miles</td>
+                    <td>Paid ${entry.cost} for {entry.gallons} Gallons</td>
+                    <td className="text-right font-medium">{gasMileage.toFixed(2)} mi/G</td>
+                  </tr>
                 );
               })}
-            </div>
+            </table>
           </div>
         </div>
       </div>
