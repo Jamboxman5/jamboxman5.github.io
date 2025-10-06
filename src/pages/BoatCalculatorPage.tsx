@@ -202,17 +202,26 @@ export default function BoatCalculatorPage() {
               </div>
             )}
 
-            
-
-            <table id="entryList" className="mt-6 space-y-2 text-white w-full text-lg font-thin">
+            <table
+              id="entryList"
+              className="mt-6 space-y-2 text-white w-full font-thin text-base sm:text-[23px] xs:text-[16px] md:text-xl"
+            >
               {entries.map((entry, idx) => {
                 const gasMileage = entry.miles / entry.gallons;
                 return (
                   <tr key={idx} className="w-full">
-                    <td className="font-medium">{entry.month}/{entry.day}/{entry.year}</td>
-                    <td>Drove {entry.miles} Miles</td>
-                    <td>Paid ${entry.cost} for {entry.gallons} Gallons</td>
-                    <td className="text-right font-medium">{gasMileage.toFixed(2)} mi/G</td>
+                    <td className="font-medium pr-2 whitespace-nowrap">
+                      {entry.month}/{entry.day}/{entry.year}
+                    </td>
+                    <td className="pr-2 whitespace-nowrap">
+                      Drove {entry.miles} Miles
+                    </td>
+                    <td className="pr-2 whitespace-nowrap">
+                      Paid ${entry.cost} for {entry.gallons} Gallons
+                    </td>
+                    <td className="text-right font-medium whitespace-nowrap">
+                      {gasMileage.toFixed(2)} mi/G
+                    </td>
                   </tr>
                 );
               })}
