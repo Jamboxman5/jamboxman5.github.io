@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import NavigationBar from "../components/NavigationBar";
 import mePNG from "/me.png";
 import accommodate from "/accommodate.png";
+import checkmate from "/checkmate.png";
 
 export default function HomePage() {
   useEffect(() => {
@@ -142,12 +143,12 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="w-full bg-gray-900 min-h-[450px] mt-20">
+        <div className="w-full bg-gray-900 mt-20">
           <p className="text-white font-bold text-center text-3xl pt-10">Featured Projects</p>
-          <div className="flex flex-wrap w-full mt-10 min-h-[240px]">
+          <div className="flex flex-wrap w-full mt-10 min-h-[240px] pb-16">
             <a 
               href="https://github.com/Jamboxman5/CSC495-AccommoDate-API"
-              className="w-7/24 text-center bg-gradient-to-r from-indigo-900 to-purple-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-2 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"    
+              className="w-7/24 text-center bg-gradient-to-r from-indigo-900 to-purple-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"    
               >
                 <img 
                 src={accommodate}
@@ -159,10 +160,10 @@ export default function HomePage() {
             </a>
             <a 
               href="https://github.com/Paul-Austin-Oswego-CSC480-HCI521/OZ-CSC-480-HCI-521-Fall-2024"
-              className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-purple-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-2 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"    
+              className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-purple-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"    
               >          
               <img 
-                src={accommodate}
+                src={checkmate}
                 className="rounded-t-2xl"
               />
               <div className="text-gray-200 hover:text-gray-200 font-medium text-2xl text-center py-4">
@@ -171,7 +172,7 @@ export default function HomePage() {
             </a>
             <a 
               href="https://github.com/Jamboxman5/ABNP-Game"
-              className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-orange-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-2 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"    
+              className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-orange-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"    
               >
               <img 
                 src={accommodate}
