@@ -4,17 +4,27 @@ import NavigationBar from "../components/NavigationBar";
 import mePNG from "/me.png";
 import accommodate from "/accommodate.png";
 import checkmate from "/checkmate.png";
+import abnpgame from "/abnpgame.png";
+import GitHubCalendar from "react-github-calendar";
 
 export default function HomePage() {
   useEffect(() => {
     document.title = "Home - Sam Thompson's Portfolio";
   });
 
+  useEffect(() => {
+    fetch("https://api.github.com/repos/Jamboxman5/JahSkills/commits")
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+  });
+  })
+
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen">
-      <div className="w-screen bg-gradient-to-br from-indigo-800 to-orange-800 pt-40 pb-40 min-h-screen">
+      <div className="w-full bg-gradient-to-br from-indigo-800 to-orange-800 pt-40 pb-40 min-h-screen">
         <NavigationBar />
         <h1 className="text-center font-bold text-white">Welcome!</h1>
         <p className="text-center font-medium text-gray-200 text-xl mt-3">
@@ -74,7 +84,8 @@ export default function HomePage() {
                 <div className="text-center text-gray-300 text-lg font-medium">
                   <p className="text-white font-semibold ">Contact</p>
                   <table className="w-full">
-                    <tr>
+                    <tbody>
+                      <tr>
                       <td>
                         <p className="text-left font-normal">Email</p>
                       </td>
@@ -113,10 +124,28 @@ export default function HomePage() {
                         </p>
                       </td>
                     </tr>
+                    </tbody>
+                    
                   </table>
                 </div>
               </div>
             </div>
+            <a 
+              href="https://github.com/Jamboxman5"
+              className="text-gray-200 hover:!text-gray-200">
+              <p className="text-center font-semibold text-xl text-white mb-4">GitHub Activity Tracker</p>
+              <GitHubCalendar
+                username="Jamboxman5"
+                colorScheme="dark"
+                blockSize={16}       // Size of each square
+                blockMargin={3}      // Spacing between squares
+                fontSize={16}        // Font size for month/day labels
+                theme={{
+                  light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
+                  dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
+                }}
+              />
+            </a>
           </div>
 
           <div className="mx-auto my-10 py-10 bg-gray-800 shadow-lg rounded-4xl p-8 w-7/16 text-center">
@@ -175,7 +204,7 @@ export default function HomePage() {
               className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-orange-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"    
               >
               <img 
-                src={accommodate}
+                src={abnpgame}
                 className="rounded-t-2xl"
               />
               <div className="text-gray-200 hover:text-gray-200 font-medium text-2xl text-center py-4">
