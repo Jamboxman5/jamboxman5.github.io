@@ -31,24 +31,24 @@ export default function HomePage() {
           Gaze upon my stuff! Or else!
         </p>
 
-        <div className="flex flex-row mt-10">
-          <div className="mx-auto my-10 py-10 bg-gray-800 shadow-lg rounded-4xl p-8 w-7/16 text-center">
+        <div className="flex flex-wrap mt-10">
+          <div className="mx-auto my-10 py-10 bg-gray-800 shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-7/16 text-center">
             <p className="text-white text-3xl text-center font-bold">
               Samuel Thompson
             </p>
             <p className="text-gray-300 text-lg text-center font-semibold mt-4">
               B.S. Software Engineering <br /> SUNY College at Oswego
             </p>
-            <div className="flex flex-row py-10">
+            <div className="flex flex-wrap py-10 space-x-6 ">
               {/* Photo */}
-              <div className="flex flex-col w-1/2 space-y-4 mx-2">
+              <div className="flex flex-col w-8/10 lg:max-w-9/20 space-y-4 mx-auto">
                 <img src={mePNG} />
                 <p className="text-white text-lg font-medium">
                   "Hey, that's me!" <br /> - Sam Thompson, 2025
                 </p>
               </div>
               {/* Info */}
-              <div className="flex flex-col w-1/2 space-y-4 mx-2">
+              <div className="flex flex-col w-8/10 lg:max-w-9/20 space-y-4 mx-auto">
                 {/* Languages */}
                 <div className="text-center text-gray-300 text-lg font-medium mx-auto">
                   <p className="text-white font-semibold ">Languages</p>
@@ -148,7 +148,7 @@ export default function HomePage() {
             </a>
           </div>
 
-          <div className="mx-auto my-10 py-10 bg-gray-800 shadow-lg rounded-4xl p-8 w-7/16 text-center">
+          <div className="mx-auto my-10 py-10 bg-gray-800 shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-7/16 text-center">
             <div className="flex flex-col space-y-4">
               <p className="text-white text-3xl text-center font-bold">
                 Live Projects:
