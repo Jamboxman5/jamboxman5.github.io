@@ -214,10 +214,10 @@ export default function BoatCalculatorPage() {
                       {entry.month}/{entry.day}/{entry.year}
                     </td>
                     <td className="pr-2 whitespace-nowrap">
-                      Drove {entry.miles} Miles
+                      {entry.miles} Miles
                     </td>
                     <td className="pr-2 whitespace-nowrap">
-                      Paid ${entry.cost} for {entry.gallons} Gallons
+                      ${entry.cost} / {entry.gallons}G
                     </td>
                     <td className="text-right font-medium whitespace-nowrap">
                       {gasMileage.toFixed(2)} mi/G
