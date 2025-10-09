@@ -24,7 +24,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      <div className="w-full bg-gradient-to-br from-indigo-800 to-orange-800 pt-40 pb-40 min-h-screen">
+      <div className="w-full bg-gradient-to-br from-indigo-800 to-orange-800 pt-40 pb-40 h-full">
         <NavigationBar />
         <h1 className="text-center font-bold text-white">Welcome!</h1>
         <p className="text-center font-medium text-gray-200 text-xl mt-3">
@@ -214,6 +214,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      
     </div>
   );
 }
