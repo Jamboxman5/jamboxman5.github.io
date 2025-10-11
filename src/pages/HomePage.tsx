@@ -48,7 +48,7 @@ export default function HomePage() {
                 </p>
               </div>
               {/* Info */}
-              <div className="flex flex-col w-8/10 lg:max-w-9/20 space-y-4 mx-auto">
+              <div className="flex flex-col items-center justify-center w-8/10 lg:max-w-9/20 space-y-8 mx-auto">
                 {/* Languages */}
                 <div className="text-center text-gray-300 text-lg font-medium mx-auto">
                   <p className="text-white font-semibold ">Languages</p>
@@ -80,60 +80,61 @@ export default function HomePage() {
                     it.
                   </p>
                 </div>
-                {/* Contact */}
-                <div className="text-center text-gray-300 text-lg font-medium">
-                  <p className="text-white font-semibold ">Contact</p>
-                  <table className="w-full">
-                    <tbody>
-                      <tr>
-                      <td>
-                        <p className="text-left font-normal">Email</p>
-                      </td>
-                      <td>
-                        <p className="text-center mx-4 text-white">|</p>
-                      </td>
-                      <td>
-                        <p className="text-right font-thin">
-                          samthompson1818@gmail.com
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p className="text-left font-normal">Phone</p>
-                      </td>
-                      <td>
-                        <p className="text-center mx-4 text-white">|</p>
-                      </td>
-                      <td>
-                        <p className="text-right ml-auto font-thin">
-                          +1 (315) 200-9977
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p className="text-left font-normal">Discord</p>
-                      </td>
-                      <td>
-                        <p className="text-center mx-4 text-white">|</p>
-                      </td>
-                      <td>
-                        <p className="text-right ml-auto font-thin">
-                          @sthomps9
-                        </p>
-                      </td>
-                    </tr>
-                    </tbody>
-                    
-                  </table>
-                </div>
+                
               </div>
+            </div>
+            {/* Contact */}
+            <div className="text-center text-gray-300 text-lg font-medium w-7/8 mx-auto">
+              <p className="text-white font-semibold ">Contact</p>
+              <table className="w-full">
+                <tbody>
+                  <tr>
+                  <td>
+                    <p className="text-left font-normal">Email</p>
+                  </td>
+                  <td>
+                    <p className="text-center mx-4 text-white">|</p>
+                  </td>
+                  <td>
+                    <p className="text-right font-thin">
+                      samthompson1818@gmail.com
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p className="text-left font-normal">Phone</p>
+                  </td>
+                  <td>
+                    <p className="text-center mx-4 text-white">|</p>
+                  </td>
+                  <td>
+                    <p className="text-right ml-auto font-thin">
+                      +1 (315) 200-9977
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p className="text-left font-normal">Discord</p>
+                  </td>
+                  <td>
+                    <p className="text-center mx-4 text-white">|</p>
+                  </td>
+                  <td>
+                    <p className="text-right ml-auto font-thin">
+                      @sthomps9
+                    </p>
+                  </td>
+                </tr>
+                </tbody>
+                
+              </table>
             </div>
             <a 
               href="https://github.com/Jamboxman5"
               className="text-gray-200 hover:!text-gray-200">
-              <p className="text-center font-semibold text-xl text-white mb-4">GitHub Activity Tracker</p>
+              <p className="text-center font-semibold text-xl text-white mb-4  pt-10">GitHub Activity Tracker</p>
               <GitHubCalendar
                 username="Jamboxman5"
                 colorScheme="dark"
