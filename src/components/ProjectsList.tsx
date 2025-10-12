@@ -39,10 +39,10 @@ export default function ProjectsList() {
           <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
             <li>
               <a
-                href="https://github.com/Jamboxman5/CSC495-AccommoDate-API"
+                href="https://cs.oswego.edu/~sthomps9/coursework/CS1WorkSite/index.html"
                 className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
-                AccommoDate (API)
+                Principles of Programming
               </a>
             </li>
             <li>
@@ -50,7 +50,7 @@ export default function ProjectsList() {
                 href="https://github.com/Jamboxman5/CSC495-AccommoDate-Interface"
                 className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
-                AccommoDate (Interface)
+                Software Engineering Seminar I
               </a>
             </li>
             <li>
@@ -58,7 +58,7 @@ export default function ProjectsList() {
                 href="https://github.com/Jamboxman5/CSC344-Turing-Machine-Simulation"
                 className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
-                Turing Machine Simulation
+                Programming Languages
               </a>
             </li>
             <li>
@@ -66,15 +66,15 @@ export default function ProjectsList() {
                 href="https://github.com/Jamboxman5/CSC454-Factory-Simulation"
                 className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
-                Drill / Press Simulation
+                System Simulation
               </a>
             </li>
             <li>
               <a
-                href="https://github.com/Jamboxman5/CSC344-Logical-Reduction"
+                href="https://cs.oswego.edu/~sthomps9/coursework/ISC250/"
                 className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
-                Logical Reduction (Clojure)
+                Programming Through Mobile Apps
               </a>
             </li>
             <li>
@@ -82,15 +82,15 @@ export default function ProjectsList() {
                 href="https://github.com/Jamboxman5/CSC322-Dungeon-Crawler-Game"
                 className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
-                Dungeon Crawler
+                Systems Programming
               </a>
             </li>
             <li>
               <a
-                href="https://github.com/Jamboxman5/CSC344-Shell-Regex"
+                href="https://github.com/Jamboxman5/CSC322-Dungeon-Crawler-Game"
                 className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
-                Shell / Regex / Mail Parser
+                Game Programming
               </a>
             </li>
           </ul>

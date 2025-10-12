@@ -60,14 +60,6 @@ export default function GamesList() {
                 Plugins
               </button>
             </li>
-            <li>
-              <a
-                href="https://github.com/Jamboxman5/JahSkills"
-                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
-              >
-                Galaga
-              </a>
-            </li>
           </ul>
         </div>
       )}
