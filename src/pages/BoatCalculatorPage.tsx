@@ -209,7 +209,7 @@ export default function BoatCalculatorPage() {
               {entries.map((entry, idx) => {
                 const gasMileage = entry.miles / entry.gallons;
                 return (
-                  <tr key={idx} className="w-full">
+                  <tr key={idx} className="w-full pt-2">
                     <td className="font-medium pr-2 whitespace-nowrap">
                       {entry.month}/{entry.day}/{entry.year}
                     </td>
@@ -221,6 +221,13 @@ export default function BoatCalculatorPage() {
                     </td>
                     <td className="text-right font-medium whitespace-nowrap">
                       {gasMileage.toFixed(2)} mi/G
+                    </td>
+                    <td className="text-right font-medium whitespace-nowrap">
+                      <button 
+                        className="bg-red-500 hover:bg-red-700 rounded-lg px-2 py-1 mt-1 "
+                        >
+                          X
+                        </button>
                     </td>
                   </tr>
                 );
