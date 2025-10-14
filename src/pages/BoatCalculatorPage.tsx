@@ -204,7 +204,7 @@ export default function BoatCalculatorPage() {
 
             <table
               id="entryList"
-              className="mt-6 space-y-2 text-white w-full font-thin text-xs sm:text-base md:text-xl lg:text-2xl"
+              className="mt-6 space-y-2 text-white max-w-full font-thin text-xs sm:text-base md:text-xl lg:text-2xl"
             >
               {entries.map((entry, idx) => {
                 const gasMileage = entry.miles / entry.gallons;
@@ -224,7 +224,7 @@ export default function BoatCalculatorPage() {
                     </td>
                     <td className="text-right font-medium whitespace-nowrap">
                       <button 
-                        className="bg-red-500 hover:bg-red-700 rounded-lg px-2 py-1 mt-1 "
+                        className="bg-red-500 hover:bg-red-700 rounded-lg px-2 py-1 mt-1 ml-3"
                         >
                           X
                         </button>
