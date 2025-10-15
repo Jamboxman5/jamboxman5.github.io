@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import NavigationBar from "../components/NavigationBar";
+import NavigationBar from "../components/navbar/NavigationBar";
 import JahSkills from "../components/plugins/JahSkills";
 import WesternBounties from "../components/plugins/WesternBounties";
 import WesternHunting from "../components/plugins/WesternHunting";

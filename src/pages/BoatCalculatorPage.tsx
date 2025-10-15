@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import NavigationBar from "../components/NavigationBar";
+import NavigationBar from "../components/navbar/NavigationBar";
 
 export default function BoatCalculatorPage() {
   const [plateNo, setPlateNo] = useState("");

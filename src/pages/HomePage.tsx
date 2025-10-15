@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import NavigationBar from "../components/NavigationBar";
+import NavigationBar from "../components/navbar/NavigationBar";
 import mePNG from "/me.png";
 import accommodate from "/accommodate.png";
 import checkmate from "/checkmate.png";

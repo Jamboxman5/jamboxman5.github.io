@@ -1,7 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ProjectsList() {
   const [dropdownActive, setDropDownActive] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handle495 = () => {
+    navigate("/projects/csc-495");
+  };
 
   return (
     <div>
@@ -46,12 +53,12 @@ export default function ProjectsList() {
               </a>
             </li>
             <li>
-              <a
-                href="https://github.com/Jamboxman5/CSC495-AccommoDate-Interface"
+              <button
+                onClick={handle495}
                 className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
               >
-                Software Engineering Seminar I
-              </a>
+                Software Engineering Seminar (Capstone)
+              </button>
             </li>
             <li>
               <a
