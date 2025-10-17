@@ -6,6 +6,7 @@ import accommodate from "/accommodate.png";
 import checkmate from "/checkmate.png";
 import abnpgame from "/abnpgame.png";
 import GitHubCalendar from "react-github-calendar";
+import ThemeSelector from "../components/ThemeSelector";
 
 export default function HomePage() {
   useEffect(() => {
@@ -14,17 +15,17 @@ export default function HomePage() {
 
   useEffect(() => {
     fetch("https://api.github.com/repos/Jamboxman5/JahSkills/commits")
-  .then(res => res.json())
-  .then(data => {
-    console.log(data);
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+      });
   });
-  })
 
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen">
-      <div className="w-full bg-gradient-to-br from-indigo-800 to-orange-800 pt-40 pb-40 h-full">
+      <div className="w-full themed-bg pt-40 pb-40 h-full">
         <NavigationBar />
         <h1 className="text-center font-bold text-white">Welcome!</h1>
         <p className="text-center font-medium text-gray-200 text-xl mt-3">
@@ -80,7 +81,6 @@ export default function HomePage() {
                     it.
                   </p>
                 </div>
-                
               </div>
             </div>
             {/* Contact */}
@@ -89,61 +89,67 @@ export default function HomePage() {
               <table className="w-full">
                 <tbody>
                   <tr>
-                  <td>
-                    <p className="text-left font-normal">Email</p>
-                  </td>
-                  <td>
-                    <p className="text-center mx-4 text-white">|</p>
-                  </td>
-                  <td>
-                    <p className="text-right font-thin">
-                      samthompson1818@gmail.com
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p className="text-left font-normal">Phone</p>
-                  </td>
-                  <td>
-                    <p className="text-center mx-4 text-white">|</p>
-                  </td>
-                  <td>
-                    <p className="text-right ml-auto font-thin">
-                      +1 (315) 200-9977
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <p className="text-left font-normal">Discord</p>
-                  </td>
-                  <td>
-                    <p className="text-center mx-4 text-white">|</p>
-                  </td>
-                  <td>
-                    <p className="text-right ml-auto font-thin">
-                      @sthomps9
-                    </p>
-                  </td>
-                </tr>
+                    <td>
+                      <p className="text-left font-normal">Email</p>
+                    </td>
+                    <td>
+                      <p className="text-center mx-4 text-white">|</p>
+                    </td>
+                    <td>
+                      <p className="text-right font-thin">
+                        samthompson1818@gmail.com
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p className="text-left font-normal">Phone</p>
+                    </td>
+                    <td>
+                      <p className="text-center mx-4 text-white">|</p>
+                    </td>
+                    <td>
+                      <p className="text-right ml-auto font-thin">
+                        +1 (315) 200-9977
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p className="text-left font-normal">Discord</p>
+                    </td>
+                    <td>
+                      <p className="text-center mx-4 text-white">|</p>
+                    </td>
+                    <td>
+                      <p className="text-right ml-auto font-thin">@sthomps9</p>
+                    </td>
+                  </tr>
                 </tbody>
-                
               </table>
             </div>
-            <a 
+            <a
               href="https://github.com/Jamboxman5"
-              className="text-gray-200 hover:!text-gray-200">
-              <p className="text-center font-semibold text-xl text-white mb-4  pt-10">GitHub Activity Tracker</p>
+              className="text-gray-200 hover:!text-gray-200"
+            >
+              <p className="text-center font-semibold text-xl text-white mb-4  pt-10">
+                GitHub Activity Tracker
+              </p>
               <GitHubCalendar
                 username="Jamboxman5"
                 colorScheme="dark"
-                blockSize={16}       // Size of each square
-                blockMargin={3}      // Spacing between squares
-                fontSize={16}        // Font size for month/day labels
+                blockSize={16} // Size of each square
+                blockMargin={3} // Spacing between squares
+                fontSize={16} // Font size for month/day labels
                 theme={{
-                  light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
-                  dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
+                  light: [
+                    "#ebedf0",
+                    "#9be9a8",
+                    "#40c463",
+                    "#30a14e",
+                    "#216e39",
+                  ],
+                  dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
                 }}
               />
             </a>
@@ -175,48 +181,40 @@ export default function HomePage() {
         </div>
 
         <div className="w-full bg-gray-900 mt-20">
-          <p className="text-white font-bold text-center text-3xl pt-10">Featured Projects</p>
+          <p className="text-white font-bold text-center text-3xl pt-10">
+            Featured Projects
+          </p>
           <div className="flex flex-wrap w-full mt-10 min-h-[240px] pb-16">
-            <a 
+            <a
               href="https://github.com/Jamboxman5/CSC495-AccommoDate-API"
-              className="w-7/24 text-center bg-gradient-to-r from-indigo-900 to-purple-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"    
-              >
-                <img 
-                src={accommodate}
-                className="rounded-t-2xl"
-              />
+              className="w-7/24 text-center bg-gradient-to-r from-indigo-900 to-purple-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"
+            >
+              <img src={accommodate} className="rounded-t-2xl" />
               <div className="text-gray-200 hover:text-gray-200 font-medium text-2xl text-center py-4">
-                AccommoDate            
+                AccommoDate
               </div>
             </a>
-            <a 
+            <a
               href="https://github.com/Paul-Austin-Oswego-CSC480-HCI521/OZ-CSC-480-HCI-521-Fall-2024"
-              className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-purple-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"    
-              >          
-              <img 
-                src={checkmate}
-                className="rounded-t-2xl"
-              />
+              className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-purple-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"
+            >
+              <img src={checkmate} className="rounded-t-2xl" />
               <div className="text-gray-200 hover:text-gray-200 font-medium text-2xl text-center py-4">
-              CheckMate            
+                CheckMate
               </div>
             </a>
-            <a 
+            <a
               href="https://github.com/Jamboxman5/ABNP-Game"
-              className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-orange-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"    
-              >
-              <img 
-                src={abnpgame}
-                className="rounded-t-2xl"
-              />
+              className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-orange-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"
+            >
+              <img src={abnpgame} className="rounded-t-2xl" />
               <div className="text-gray-200 hover:text-gray-200 font-medium text-2xl text-center py-4">
-              ABNPGame            
+                ABNPGame
               </div>
             </a>
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

@@ -17,6 +17,49 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* [data-theme='night'] {
+  --color-bg: #121212;
+  --color-text: #c0c0c0;
+  --color-primary: #0d6efd;
+}
+
+[data-theme='day'] {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-primary: #b58900;
+}
+
+[data-theme='sunrise'] {
+  --bg-gradient: linear-gradient(to bottom right, #f1ff84, #84ccff);
+  --color-text: #ffffff;
+  --color-primary: #0d6efd;
+}
+
+[data-theme='sunset'] {
+  --bg-gradient: linear-gradient(to bottom right, #4b17cf, #ff6f00);
+  --color-text: #c0c0c0;
+  --color-primary: #b58900;
+} */
+
+[data-theme='day'] .themed-bg {
+  background-image: linear-gradient(to bottom right, #ffffff, #e0e0e0);  
+  color: #c0c0c0;
+}
+
+[data-theme='night'] .themed-bg {
+  background-image: linear-gradient(to bottom right, #000, #222);  
+  color: #000;
+}
+
+[data-theme='sunrise'] .themed-bg {
+  background-image: linear-gradient(to bottom right, #f1ff84, #84ccff);
+  color: #ffffff;
+}
+
+[data-theme='sunset'] .themed-bg {
+  background-image: linear-gradient(to bottom right, #4b17cf, #ff6f00);
+  color: #c0c0c0;
+}
 
 h1 {
   font-size: 3.2em;
