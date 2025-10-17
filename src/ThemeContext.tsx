@@ -21,7 +21,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     const storedTheme = localStorage.getItem(THEME_KEY) as Theme | null;
     const initial =
-      storedTheme && THEMES.includes(storedTheme) ? storedTheme : "day";
+      storedTheme && THEMES.includes(storedTheme) ? storedTheme : "sunset";
     applyTheme(initial);
   }, []);
 
