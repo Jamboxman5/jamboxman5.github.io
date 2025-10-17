@@ -6,7 +6,6 @@ import accommodate from "/accommodate.png";
 import checkmate from "/checkmate.png";
 import abnpgame from "/abnpgame.png";
 import GitHubCalendar from "react-github-calendar";
-import ThemeSelector from "../components/ThemeSelector";
 
 export default function HomePage() {
   useEffect(() => {
@@ -14,11 +13,12 @@ export default function HomePage() {
   });
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/Jamboxman5/JahSkills/commits")
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-      });
+    fetch("https://api.github.com/repos/Jamboxman5/JahSkills/commits").then(
+      (res) => res.json()
+    );
+    // .then((data) => {
+    //   console.log(data);
+    // });
   });
 
   const navigate = useNavigate();
