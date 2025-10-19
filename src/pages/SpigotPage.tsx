@@ -11,7 +11,7 @@ export default function SpigotPage() {
     document.title = "Spigot Plugins";
   });
   return (
-      <div className="bg-gradient-to-br from-indigo-800 to-orange-800 pt-40 pb-40 min-h-screen">
+      <div className="themed-bg to-orange-800 pt-40 pb-40 min-h-screen">
         <NavigationBar />
         <div className="flex flex-col space-y-4">
           <img src={spigotPng} className="mx-auto"/>

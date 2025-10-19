@@ -92,11 +92,11 @@ export default function BoatCalculatorPage() {
 
   return (
     <div className="min-h-full">
-      <div className="w-screen bg-gradient-to-br from-indigo-800 to-orange-800 pt-40 pb-40 min-h-screen">
+      <div className="w-screen themed-bg pt-40 pb-40 min-h-screen">
         <NavigationBar />
         <div className="my-20 flex items-center justify-center px-4">
-          <div className="min-w-7/8 min-h-5/8 max-w-lg bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg">
-            <h1 className="text-5xl font-bold text-white text-center mb-2">
+          <div className="min-w-7/8 min-h-5/8 max-w-lg themed-element p-6 sm:p-8 rounded-xl shadow-lg">
+            <h1 className="text-5xl font-bold text-center themed-element mb-2">
               Fuel Economy Tracker
             </h1>
             <p className="text-2xl text-gray-400 text-center mb-6">
@@ -111,7 +111,7 @@ export default function BoatCalculatorPage() {
               }}
             >
               <div>
-                <label htmlFor="plateNo" className="block text-xl text-white">
+                <label htmlFor="plateNo" className="block text-xl themed-element">
                   Plate Number:
                 </label>
                 <input
@@ -119,12 +119,12 @@ export default function BoatCalculatorPage() {
                   id="plateNo"
                   value={plateNo}
                   onChange={(e) => setPlateNo(e.target.value.toUpperCase())}
-                  className="uppercase bg-gray-700 mt-1 w-full text-gray-200 rounded-lg border border-gray-300 pl-4 py-3 text-2xl shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                  className="uppercase themed-field mt-1 w-full rounded-lg border border-gray-300 pl-4 py-3 text-2xl shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
                 />
               </div>
 
               <div>
-                <label htmlFor="gasVolume" className="block text-xl text-white">
+                <label htmlFor="gasVolume" className="block text-xl themed-element">
                   Amount of Gas Purchased:
                 </label>
                 <input
@@ -132,12 +132,12 @@ export default function BoatCalculatorPage() {
                   id="gasVolume"
                   value={gasVolume}
                   onChange={(e) => setGasVolume(e.target.value)}
-                  className="bg-gray-700 mt-1 w-full text-gray-200 rounded-lg border border-gray-300 pl-4 py-3 text-2xl shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                  className="themed-field mt-1 w-full rounded-lg border border-gray-300 pl-4 py-3 text-2xl shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
                 />
               </div>
 
               <div>
-                <label htmlFor="gasPrice" className="block text-xl text-white">
+                <label htmlFor="gasPrice" className="block text-xl themed-element">
                   Price of Gas Purchased:
                 </label>
                 <input
@@ -145,12 +145,12 @@ export default function BoatCalculatorPage() {
                   id="gasPrice"
                   value={gasPrice}
                   onChange={(e) => setGasPrice(e.target.value)}
-                  className="bg-gray-700 mt-1 w-full text-gray-200 rounded-lg border border-gray-300 pl-4 py-3 text-2xl shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                  className="themed-field mt-1 w-full rounded-lg border border-gray-300 pl-4 py-3 text-2xl shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
                 />
               </div>
 
               <div>
-                <label htmlFor="milesDriven" className="block text-xl text-white">
+                <label htmlFor="milesDriven" className="block text-xl themed-element">
                   Miles Driven:
                 </label>
                 <input
@@ -158,7 +158,7 @@ export default function BoatCalculatorPage() {
                   id="milesDriven"
                   value={milesDriven}
                   onChange={(e) => setMilesDriven(e.target.value)}
-                  className="bg-gray-700 mt-1 w-full text-gray-200 rounded-lg border border-gray-300 pl-4 py-3 text-2xl shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                  className="themed-field mt-1 w-full rounded-lg border border-gray-300 pl-4 py-3 text-2xl shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
                 />
               </div>
 
