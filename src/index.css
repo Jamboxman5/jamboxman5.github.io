@@ -53,6 +53,9 @@
   background-image: linear-gradient(to bottom right, #fff, #fff);  
   color: #000;
 }
+[data-theme='day'] .themed-text {
+  color: #000;
+}
 
 
 [data-theme='night'] .themed-bg {
@@ -67,7 +70,9 @@
   background-image: linear-gradient(to bottom right, #222, #222);  
   color: #aaa;
 }
-
+[data-theme='night'] .themed-text {
+  color: #fff;
+}
 
 
 [data-theme='sunrise'] .themed-bg {
@@ -82,7 +87,9 @@
   background-image: linear-gradient(to bottom right, #fff, #fff);  
   color: #000;
 }
-
+[data-theme='sunrise'] .themed-text {
+  color: #000;
+}
 
 
 [data-theme='sunset'] .themed-bg {
@@ -97,7 +104,9 @@
   background-image: linear-gradient(to bottom right, oklch(37.3% 0.034 259.733), oklch(37.3% 0.034 259.733));  
   color: #aaa;
 }
-
+[data-theme='sunset'] .themed-text {
+  color: #fff;
+}
 
 h1 {
   font-size: 3.2em;
