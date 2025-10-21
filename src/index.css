@@ -75,12 +75,12 @@
   color: #fff;
 }
 [data-theme='sunrise'] .themed-element {
-  background-image: linear-gradient(to bottom right, oklch(27.8% 0.033 256.848), oklch(27.8% 0.033 256.848));  
-  color: #fff;
+  background-image: linear-gradient(to bottom right, #fff, #fff);  
+  color: #000;
 }
 [data-theme='sunrise'] .themed-field {
-  background-image: linear-gradient(to bottom right, oklch(37.3% 0.034 259.733), oklch(37.3% 0.034 259.733));  
-  color: #aaa;
+  background-image: linear-gradient(to bottom right, #fff, #fff);  
+  color: #000;
 }
 
 
