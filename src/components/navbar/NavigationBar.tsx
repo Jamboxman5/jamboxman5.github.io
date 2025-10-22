@@ -11,7 +11,7 @@ export default function NavigationBar() {
   };
 
   return (
-<nav className="bg-gradient-to-r from-gray-900 to-indigo-900 text-white shadow-md fixed top-0 left-0 w-full z-50">
+<nav className="themed-navbar text-white shadow-md fixed top-0 left-0 w-full z-50">
       <div className="max-w-8xl mx-auto px-4">
         <ul className="flex space-x-7 py-5">
           <button

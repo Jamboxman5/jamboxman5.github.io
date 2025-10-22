@@ -6,12 +6,16 @@ import accommodate from "/accommodate.png";
 import checkmate from "/checkmate.png";
 import abnpgame from "/abnpgame.png";
 import GitHubCalendar from "react-github-calendar";
+import { useTheme } from "../ThemeContext";
 
 export default function HomePage() {
   useEffect(() => {
     document.title = "Home - Sam Thompson's Portfolio";
   });
 
+  const { theme } = useTheme();
+  const githubCalendarTheme =
+    theme === "day" || theme === "sunrise" ? "light" : "dark";
   useEffect(() => {
     fetch("https://api.github.com/repos/Jamboxman5/JahSkills/commits").then(
       (res) => res.json()
@@ -27,53 +31,53 @@ export default function HomePage() {
     <div className="min-h-screen">
       <div className="w-full themed-bg pt-40 pb-40 h-full">
         <NavigationBar />
-        <h1 className="text-center font-bold text-white">Welcome!</h1>
-        <p className="text-center font-medium text-gray-200 text-xl mt-3">
+        <h1 className="text-center font-bold themed-text">Welcome!</h1>
+        <p className="text-center font-medium themed-text text-xl mt-3">
           Gaze upon my stuff! Or else!
         </p>
 
         <div className="flex flex-wrap mt-10">
-          <div className="mx-auto my-10 py-10 bg-gray-800 shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-7/16 text-center">
-            <p className="text-white text-3xl text-center font-bold">
+          <div className="mx-auto my-10 py-10 themed-element shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-7/16 text-center">
+            <p className="text-3xl text-center font-bold">
               Samuel Thompson
             </p>
-            <p className="text-gray-300 text-lg text-center font-semibold mt-4">
+            <p className="text-lg text-center font-semibold mt-4">
               B.S. Software Engineering <br /> SUNY College at Oswego
             </p>
             <div className="flex flex-wrap py-10 space-x-6 ">
               {/* Photo */}
               <div className="flex flex-col w-8/10 lg:max-w-9/20 space-y-4 mx-auto">
                 <img src={mePNG} />
-                <p className="text-white text-lg font-medium">
+                <p className=" text-lg font-medium">
                   "Hey, that's me!" <br /> - Sam Thompson, 2025
                 </p>
               </div>
               {/* Info */}
               <div className="flex flex-col items-center justify-center w-8/10 lg:max-w-9/20 space-y-8 mx-auto">
                 {/* Languages */}
-                <div className="text-center text-gray-300 text-lg font-medium mx-auto">
-                  <p className="text-white font-semibold ">Languages</p>
+                <div className="text-center text-lg font-medium mx-auto">
+                  <p className="themed-element font-semibold ">Languages</p>
                   <div className="flex flex-wrap mx-auto">
-                    <p className="text-gray-300 font-thin mx-2">Java</p>
-                    <p className="text-gray-300 font-thin mx-2">JavaScript</p>
-                    <p className="text-gray-300 font-thin mx-2">TypeScript</p>
-                    <p className="text-gray-300 font-thin mx-2">XML</p>
-                    <p className="text-gray-300 font-thin mx-2">HTML</p>
-                    <p className="text-gray-300 font-thin mx-2">CSS</p>
-                    <p className="text-gray-300 font-thin mx-2">C</p>
-                    <p className="text-gray-300 font-thin mx-2">C++</p>
-                    <p className="text-gray-300 font-thin mx-2">C#</p>
-                    <p className="text-gray-300 font-thin mx-2">SQL</p>
-                    <p className="text-gray-300 font-thin mx-2">Clojure</p>
-                    <p className="text-gray-300 font-thin mx-2">Python</p>
-                    <p className="text-gray-300 font-thin mx-2">ASP / Prolog</p>
-                    <p className="text-gray-300 font-thin mx-2">YAML</p>
+                    <p className="text-gray-500 font-thin mx-2">Java</p>
+                    <p className="text-gray-500 font-thin mx-2">JavaScript</p>
+                    <p className="text-gray-500 font-thin mx-2">TypeScript</p>
+                    <p className="text-gray-500 font-thin mx-2">XML</p>
+                    <p className="text-gray-500 font-thin mx-2">HTML</p>
+                    <p className="text-gray-500 font-thin mx-2">CSS</p>
+                    <p className="text-gray-500 font-thin mx-2">C</p>
+                    <p className="text-gray-500 font-thin mx-2">C++</p>
+                    <p className="text-gray-500 font-thin mx-2">C#</p>
+                    <p className="text-gray-500 font-thin mx-2">SQL</p>
+                    <p className="text-gray-500 font-thin mx-2">Clojure</p>
+                    <p className="text-gray-500 font-thin mx-2">Python</p>
+                    <p className="text-gray-500 font-thin mx-2">ASP / Prolog</p>
+                    <p className="text-gray-500 font-thin mx-2">YAML</p>
                   </div>
                 </div>
                 {/* About Me */}
                 <div className="text-center text-gray-300 text-lg font-medium mx-auto">
                   <p className="text-white font-semibold ">About Me</p>
-                  <p className="text-gray-300 font-thin">
+                  <p className="text-gray-500 font-thin">
                     I like computers. I like solving problems. I like solving
                     problems with computers. I also like to make things that
                     help people solve their own problems. If you've got a
@@ -84,7 +88,7 @@ export default function HomePage() {
               </div>
             </div>
             {/* Contact */}
-            <div className="text-center text-gray-300 text-lg font-medium w-7/8 mx-auto">
+            <div className="text-center text-gray-500 text-lg font-medium w-7/8 mx-auto">
               <p className="text-white font-semibold ">Contact</p>
               <table className="w-full">
                 <tbody>
@@ -135,9 +139,11 @@ export default function HomePage() {
               <p className="text-center font-semibold text-xl text-white mb-4  pt-10">
                 GitHub Activity Tracker
               </p>
-              <GitHubCalendar
+              <div className="text-gray-500">
+                
+                <GitHubCalendar
                 username="Jamboxman5"
-                colorScheme="dark"
+                colorScheme={githubCalendarTheme}
                 blockSize={16} // Size of each square
                 blockMargin={3} // Spacing between squares
                 fontSize={16} // Font size for month/day labels
@@ -152,12 +158,14 @@ export default function HomePage() {
                   dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
                 }}
               />
+              </div>
+              
             </a>
           </div>
 
-          <div className="mx-auto my-10 py-10 bg-gray-800 shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-7/16 text-center">
+          <div className="mx-auto my-10 py-10 themed-element shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-7/16 text-center">
             <div className="flex flex-col items-center justify-center space-y-4 h-full">
-              <p className="text-white text-3xl text-center font-bold">
+              <p className=" text-3xl text-center font-bold">
                 Live Projects:
               </p>
 
