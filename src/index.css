@@ -56,10 +56,13 @@
 [data-theme='day'] .themed-text {
   color: #000;
 }
+<<<<<<< HEAD
 [data-theme='day'] .themed-navbar {
   background-image: linear-gradient(to bottom, oklch(39.8% 0.195 277.366), oklch(39.8% 0.195 277.366));  
   color: #000;
 }
+=======
+>>>>>>> 6598c98e70ea8b75c98c6d5305efbb875444d92d
 
 
 [data-theme='night'] .themed-bg {
@@ -77,10 +80,14 @@
 [data-theme='night'] .themed-text {
   color: #fff;
 }
+<<<<<<< HEAD
 [data-theme='night'] .themed-navbar {
   background-image: linear-gradient(to bottom, #fff, #fff);  
   color: #000;
 }
+=======
+
+>>>>>>> 6598c98e70ea8b75c98c6d5305efbb875444d92d
 
 [data-theme='sunrise'] .themed-bg {
   background-image: linear-gradient(to bottom right, #f1ff84, #84ccff);
@@ -95,12 +102,18 @@
   color: #000;
 }
 [data-theme='sunrise'] .themed-text {
+<<<<<<< HEAD
   color: #fff;
 }
 [data-theme='sunrise'] .themed-navbar {
   background-image: linear-gradient(to top, oklch(86.5% 0.127 207.078),  oklch(94.5% 0.129 101.54));  
   color: #000;
 }
+=======
+  color: #000;
+}
+
+>>>>>>> 6598c98e70ea8b75c98c6d5305efbb875444d92d
 
 [data-theme='sunset'] .themed-bg {
   background-image: linear-gradient(to bottom right, #4b17cf, #ff6f00);
@@ -117,10 +130,13 @@
 [data-theme='sunset'] .themed-text {
   color: #fff;
 }
+<<<<<<< HEAD
 [data-theme='sunset'] .themed-navbar {
   background-image: linear-gradient(to bottom, oklch(40.1% 0.17 325.612), oklch(64.6% 0.222 41.116));  
   color: #000;
 }
+=======
+>>>>>>> 6598c98e70ea8b75c98c6d5305efbb875444d92d
 
 h1 {
   font-size: 3.2em;
