@@ -17,13 +17,16 @@ export default function BoatCalculatorPage() {
     var miles = 0;
     var gallons = 0;
     for (const entry of entries) {
-      if (entry.month == (new Date().getMonth() + 1) && entry.year == new Date().getFullYear()) {
+      if (
+        entry.month == new Date().getMonth() + 1 &&
+        entry.year == new Date().getFullYear()
+      ) {
         miles += entry.miles;
         gallons += entry.gallons;
       }
     }
-    return (miles/gallons);
-  }
+    return miles / gallons;
+  };
 
   const getAverageFuelYear = () => {
     var miles = 0;
@@ -34,8 +37,8 @@ export default function BoatCalculatorPage() {
         gallons += entry.gallons;
       }
     }
-    return (miles/gallons);
-  }
+    return miles / gallons;
+  };
 
   const handleSubmission = async () => {
     const plateInput = plateNo.toUpperCase();
@@ -111,7 +114,10 @@ export default function BoatCalculatorPage() {
               }}
             >
               <div>
-                <label htmlFor="plateNo" className="block text-xl themed-element">
+                <label
+                  htmlFor="plateNo"
+                  className="block text-xl themed-element"
+                >
                   Plate Number:
                 </label>
                 <input
@@ -124,7 +130,10 @@ export default function BoatCalculatorPage() {
               </div>
 
               <div>
-                <label htmlFor="gasVolume" className="block text-xl themed-element">
+                <label
+                  htmlFor="gasVolume"
+                  className="block text-xl themed-element"
+                >
                   Amount of Gas Purchased:
                 </label>
                 <input
@@ -137,7 +146,10 @@ export default function BoatCalculatorPage() {
               </div>
 
               <div>
-                <label htmlFor="gasPrice" className="block text-xl themed-element">
+                <label
+                  htmlFor="gasPrice"
+                  className="block text-xl themed-element"
+                >
                   Price of Gas Purchased:
                 </label>
                 <input
@@ -150,7 +162,10 @@ export default function BoatCalculatorPage() {
               </div>
 
               <div>
-                <label htmlFor="milesDriven" className="block text-xl themed-element">
+                <label
+                  htmlFor="milesDriven"
+                  className="block text-xl themed-element"
+                >
                   Miles Driven:
                 </label>
                 <input
@@ -165,46 +180,58 @@ export default function BoatCalculatorPage() {
               <button
                 type="submit"
                 className="mt-6 w-full py-4 px-4 bg-gradient-to-t from-indigo-800 to-indigo-800 text-white text-xl font-bold rounded-lg transition-all duration-300 hover:from-purple-800 hover:to-indigo-800 hover:ring-2 hover:ring-white ring-offset-1"
->
+              >
                 Submit
               </button>
             </form>
 
             {gasInfo && (
-              <div className="mt-4 text-center text-white font-semibold text-xl py-2 whitespace-pre-line">
+              <div className="mt-4 text-center themed-text font-semibold text-xl py-2 whitespace-pre-line">
                 {gasInfo}
-                {entries.length > 0 && (() => {
-                  const totalMiles = entries.reduce((sum, e) => sum + e.miles, 0);
-                  const totalGallons = entries.reduce((sum, e) => sum + e.gallons, 0);
-                  const avgMileage = totalMiles / totalGallons;
-                  return (
-                    <div className="mt-4 text-center text-white font-medium whitespace-pre-line">
-                      {entries && (
-                        <table className="my-6 text-left text-white font-normal text-xl py-8 whitespace-pre-line w-full">
-                          <tr>
-                            <td>Average Fuel Economy (All Time): </td>
-                            <td className="text-right font-medium">{avgMileage.toFixed(2)} mi/G</td>
-                          </tr>
-                          <tr>
-                            <td>Average Fuel Economy (Month): </td>
-                            <td className="text-right font-medium">{getAverageFuelMonth().toFixed(2)} mi/G</td>
-                          </tr>
-                          <tr>
-                            <td>Average Fuel Economy (Year): </td>
-                            <td className="text-right font-medium">{getAverageFuelYear().toFixed(2)} mi/G</td>
-                          </tr>
-                        </table>
-
-                      )}                    
-                    </div>
-                  );
-                })()}
+                {entries.length > 0 &&
+                  (() => {
+                    const totalMiles = entries.reduce(
+                      (sum, e) => sum + e.miles,
+                      0
+                    );
+                    const totalGallons = entries.reduce(
+                      (sum, e) => sum + e.gallons,
+                      0
+                    );
+                    const avgMileage = totalMiles / totalGallons;
+                    return (
+                      <div className="mt-4 text-center themed-text font-medium whitespace-pre-line">
+                        {entries && (
+                          <table className="my-6 text-left themed-text font-normal text-xl py-8 whitespace-pre-line w-full">
+                            <tr>
+                              <td>Average Fuel Economy (All Time): </td>
+                              <td className="text-right font-medium">
+                                {avgMileage.toFixed(2)} mi/G
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Average Fuel Economy (Month): </td>
+                              <td className="text-right font-medium">
+                                {getAverageFuelMonth().toFixed(2)} mi/G
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Average Fuel Economy (Year): </td>
+                              <td className="text-right font-medium">
+                                {getAverageFuelYear().toFixed(2)} mi/G
+                              </td>
+                            </tr>
+                          </table>
+                        )}
+                      </div>
+                    );
+                  })()}
               </div>
             )}
 
             <table
               id="entryList"
-              className="mt-6 space-y-2 text-white max-w-full font-thin text-xs sm:text-base md:text-xl lg:text-2xl"
+              className="mt-6 space-y-2 themed-text max-w-full w-full font-thin text-xs sm:text-base md:text-xl lg:text-2xl"
             >
               {entries.map((entry, idx) => {
                 const gasMileage = entry.miles / entry.gallons;
@@ -223,11 +250,9 @@ export default function BoatCalculatorPage() {
                       {gasMileage.toFixed(2)} mi/G
                     </td>
                     <td className="text-right font-medium whitespace-nowrap">
-                      <button 
-                        className="bg-red-500 hover:bg-red-700 rounded-lg px-2 py-1 mt-1 ml-3"
-                        >
-                          X
-                        </button>
+                      <button className="bg-red-500 hover:bg-red-700 rounded-lg px-2 py-1 mt-1 ml-3">
+                        X
+                      </button>
                     </td>
                   </tr>
                 );

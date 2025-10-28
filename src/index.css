@@ -95,7 +95,7 @@
   color: #000;
 }
 [data-theme='sunrise'] .themed-text {
-  color: #fff;
+  color: #000;
 }
 [data-theme='sunrise'] .themed-navbar {
   background-image: linear-gradient(to top, oklch(56.711% 0.15029 254.254),  oklch(78.745% 0.11075 252.451));  
