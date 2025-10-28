@@ -7,6 +7,7 @@ export default function BoatCalculatorPage() {
   const [gasPrice, setGasPrice] = useState("");
   const [milesDriven, setMilesDriven] = useState("");
   const [gasInfo, setGasInfo] = useState("");
+  const [deleteEntry, setDeleteEntry] = useState("");
   const [entries, setEntries] = useState<any[]>([]);
 
   useEffect(() => {
@@ -81,6 +82,28 @@ export default function BoatCalculatorPage() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(entry),
+      });
+
+      if (!response.ok) throw new Error("HTTP error " + response.status);
+
+      const data = await response.json();
+      setEntries(data);
+    } catch (err) {
+      console.error("Error fetching API:", err);
+      setGasInfo("Error saving entry. Please try again.");
+    }
+  };
+
+  const handleDeletion = async () => {
+    if (deleteEntry.length == 0) {
+      return;
+    }
+
+    try {
+      const response = await fetch("https://mc.jahcraft.cc/api/entry/delete", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(deleteEntry),
       });
 
       if (!response.ok) throw new Error("HTTP error " + response.status);
@@ -250,7 +273,13 @@ export default function BoatCalculatorPage() {
                       {gasMileage.toFixed(2)} mi/G
                     </td>
                     <td className="text-right font-medium whitespace-nowrap">
-                      <button className="bg-red-500 hover:bg-red-700 rounded-lg px-2 py-1 mt-1 ml-3">
+                      <button
+                        className="bg-red-500 hover:bg-red-700 rounded-lg px-2 py-1 mt-1 ml-3"
+                        onClick={() => {
+                          setDeleteEntry(entry);
+                          handleDeletion();
+                        }}
+                      >
                         X
                       </button>
                     </td>
