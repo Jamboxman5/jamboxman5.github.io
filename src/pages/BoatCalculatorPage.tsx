@@ -226,24 +226,26 @@ export default function BoatCalculatorPage() {
                       <div className="mt-4 text-center themed-text font-medium whitespace-pre-line">
                         {entries && (
                           <table className="my-6 text-left themed-text font-normal text-xl py-8 whitespace-pre-line w-full">
-                            <tr>
-                              <td>Average Fuel Economy (All Time): </td>
-                              <td className="text-right font-medium">
-                                {avgMileage.toFixed(2)} mi/G
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Average Fuel Economy (Month): </td>
-                              <td className="text-right font-medium">
-                                {getAverageFuelMonth().toFixed(2)} mi/G
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>Average Fuel Economy (Year): </td>
-                              <td className="text-right font-medium">
-                                {getAverageFuelYear().toFixed(2)} mi/G
-                              </td>
-                            </tr>
+                            <tbody>
+                              <tr>
+                                <td>Average Fuel Economy (All Time): </td>
+                                <td className="text-right font-medium">
+                                  {avgMileage.toFixed(2)} mi/G
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Average Fuel Economy (Month): </td>
+                                <td className="text-right font-medium">
+                                  {getAverageFuelMonth().toFixed(2)} mi/G
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>Average Fuel Economy (Year): </td>
+                                <td className="text-right font-medium">
+                                  {getAverageFuelYear().toFixed(2)} mi/G
+                                </td>
+                              </tr>
+                            </tbody>
                           </table>
                         )}
                       </div>
@@ -256,36 +258,38 @@ export default function BoatCalculatorPage() {
               id="entryList"
               className="mt-6 space-y-2 themed-text max-w-full w-full font-thin text-xs sm:text-base md:text-xl lg:text-2xl"
             >
-              {entries.map((entry, idx) => {
-                const gasMileage = entry.miles / entry.gallons;
-                return (
-                  <tr key={idx} className="w-full pt-2">
-                    <td className="font-medium pr-2 whitespace-nowrap">
-                      {entry.month}/{entry.day}/{entry.year}
-                    </td>
-                    <td className="pr-2 whitespace-nowrap">
-                      {entry.miles} Miles
-                    </td>
-                    <td className="pr-2 whitespace-nowrap">
-                      ${entry.cost} / {entry.gallons}G
-                    </td>
-                    <td className="text-right font-medium whitespace-nowrap">
-                      {gasMileage.toFixed(2)} mi/G
-                    </td>
-                    <td className="text-right font-medium whitespace-nowrap">
-                      <button
-                        className="bg-red-500 hover:bg-red-700 rounded-lg px-2 py-1 mt-1 ml-3"
-                        onClick={() => {
-                          setDeleteEntry(entry);
-                          handleDeletion();
-                        }}
-                      >
-                        X
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
+              <tbody>
+                {entries.map((entry, idx) => {
+                  const gasMileage = entry.miles / entry.gallons;
+                  return (
+                    <tr key={idx} className="w-full pt-2">
+                      <td className="font-medium pr-2 whitespace-nowrap">
+                        {entry.month}/{entry.day}/{entry.year}
+                      </td>
+                      <td className="pr-2 whitespace-nowrap">
+                        {entry.miles} Miles
+                      </td>
+                      <td className="pr-2 whitespace-nowrap">
+                        ${entry.cost} / {entry.gallons}G
+                      </td>
+                      <td className="text-right font-medium whitespace-nowrap">
+                        {gasMileage.toFixed(2)} mi/G
+                      </td>
+                      <td className="text-right font-medium whitespace-nowrap">
+                        <button
+                          className="bg-red-500 hover:bg-red-700 rounded-lg px-2 py-1 mt-1 ml-3"
+                          onClick={() => {
+                            setDeleteEntry(entry);
+                            handleDeletion();
+                          }}
+                        >
+                          X
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
             </table>
           </div>
         </div>
