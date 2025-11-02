@@ -56,6 +56,9 @@
 [data-theme='day'] .themed-text {
   color: #000;
 }
+[data-theme='day'] .themed-title {
+  color: #000;
+}
 [data-theme='day'] .themed-navbar {
   background-image: linear-gradient(to bottom, oklch(39.8% 0.195 277.366), oklch(39.8% 0.195 277.366));  
   color: #000;
@@ -75,6 +78,9 @@
   color: #aaa;
 }
 [data-theme='night'] .themed-text {
+  color: #fff;
+}
+[data-theme='night'] .themed-title {
   color: #fff;
 }
 [data-theme='night'] .themed-navbar {
@@ -97,6 +103,9 @@
 [data-theme='sunrise'] .themed-text {
   color: #000;
 }
+[data-theme='sunrise'] .themed-title {
+  color: #fff;
+}
 [data-theme='sunrise'] .themed-navbar {
   background-image: linear-gradient(to top, oklch(56.711% 0.15029 254.254),  oklch(78.745% 0.11075 252.451));  
   color: #000;
@@ -115,6 +124,9 @@
   color: #aaa;
 }
 [data-theme='sunset'] .themed-text {
+  color: #fff;
+}
+[data-theme='sunset'] .themed-title {
   color: #fff;
 }
 [data-theme='sunset'] .themed-navbar {
