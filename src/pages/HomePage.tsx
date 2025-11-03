@@ -31,16 +31,14 @@ export default function HomePage() {
     <div className="min-h-screen">
       <div className="w-full themed-bg pt-40 pb-40 h-full">
         <NavigationBar />
-        <h1 className="text-center font-bold themed-text">Welcome!</h1>
-        <p className="text-center font-medium themed-text text-xl mt-3">
+        <h1 className="text-center font-bold themed-title">Welcome!</h1>
+        <p className="text-center font-medium themed-title text-xl mt-3">
           Gaze upon my stuff! Or else!
         </p>
 
         <div className="flex flex-wrap mt-10">
           <div className="mx-auto my-10 py-10 themed-element shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-7/16 text-center">
-            <p className="text-3xl text-center font-bold">
-              Samuel Thompson
-            </p>
+            <p className="text-3xl text-center font-bold">Samuel Thompson</p>
             <p className="text-lg text-center font-semibold mt-4">
               B.S. Software Engineering <br /> SUNY College at Oswego
             </p>
@@ -140,34 +138,36 @@ export default function HomePage() {
                 GitHub Activity Tracker
               </p>
               <div className="text-gray-500">
-                
                 <GitHubCalendar
-                username="Jamboxman5"
-                colorScheme={githubCalendarTheme}
-                blockSize={16} // Size of each square
-                blockMargin={3} // Spacing between squares
-                fontSize={16} // Font size for month/day labels
-                theme={{
-                  light: [
-                    "#ebedf0",
-                    "#9be9a8",
-                    "#40c463",
-                    "#30a14e",
-                    "#216e39",
-                  ],
-                  dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
-                }}
-              />
+                  username="Jamboxman5"
+                  colorScheme={githubCalendarTheme}
+                  blockSize={16} // Size of each square
+                  blockMargin={3} // Spacing between squares
+                  fontSize={16} // Font size for month/day labels
+                  theme={{
+                    light: [
+                      "#ebedf0",
+                      "#9be9a8",
+                      "#40c463",
+                      "#30a14e",
+                      "#216e39",
+                    ],
+                    dark: [
+                      "#161b22",
+                      "#0e4429",
+                      "#006d32",
+                      "#26a641",
+                      "#39d353",
+                    ],
+                  }}
+                />
               </div>
-              
             </a>
           </div>
 
           <div className="mx-auto my-10 py-10 themed-element shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-7/16 text-center">
             <div className="flex flex-col items-center justify-center space-y-4 h-full">
-              <p className=" text-3xl text-center font-bold">
-                Live Projects:
-              </p>
+              <p className=" text-3xl text-center font-bold">Live Projects:</p>
 
               <button
                 onClick={() => navigate("/reacttools/fueleco")}
