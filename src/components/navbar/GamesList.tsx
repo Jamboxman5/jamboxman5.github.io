@@ -47,7 +47,7 @@ export default function GamesList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/ABNP-Game"
-                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
+                className="w-full text-left block px-4 py-2 hover:bg-gray-400 text-indigo-400 font-medium hover:text-indigo-300"
               >
                 ABNPGame
               </a>
@@ -55,7 +55,7 @@ export default function GamesList() {
             <li>
               <button
                 onClick={handlePlugins}
-                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
+                className="w-full text-left block px-4 py-2 hover:bg-gray-400 text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Plugins
               </button>
