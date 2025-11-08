@@ -47,7 +47,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://cs.oswego.edu/~sthomps9/coursework/CS1WorkSite/index.html"
-                className="w-full text-left block px-4 py-2 hover:bg-gray-400 text-indigo-400 font-medium hover:text-indigo-300"
+                className="w-full text-left block px-4 py-2 hover:themed-highlight text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Principles of Programming
               </a>
@@ -55,7 +55,7 @@ export default function ProjectsList() {
             <li>
               <button
                 onClick={handle495}
-                className="w-full text-left block px-4 py-2 hover:bg-gray-400 text-indigo-400 font-medium hover:text-indigo-300"
+                className="w-full text-left block px-4 py-2 hover:themed-highlight text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Software Engineering Seminar (Capstone)
               </button>
@@ -63,7 +63,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC344-Turing-Machine-Simulation"
-                className="w-full text-left block px-4 py-2 hover:bg-gray-400 text-indigo-400 font-medium hover:text-indigo-300"
+                className="w-full text-left block px-4 py-2 hover:themed-highlight text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Programming Languages
               </a>
@@ -71,7 +71,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC454-Factory-Simulation"
-                className="w-full text-left block px-4 py-2 hover:bg-gray-400 text-indigo-400 font-medium hover:text-indigo-300"
+                className="w-full text-left block px-4 py-2 hover:themed-highlight text-indigo-400 font-medium hover:text-indigo-300"
               >
                 System Simulation
               </a>
@@ -79,7 +79,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://cs.oswego.edu/~sthomps9/coursework/ISC250/"
-                className="w-full text-left block px-4 py-2 hover:bg-gray-400 text-indigo-400 font-medium hover:text-indigo-300"
+                className="w-full text-left block px-4 py-2 hover:themed-highlight text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Programming Through Mobile Apps
               </a>
@@ -87,7 +87,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC322-Dungeon-Crawler-Game"
-                className="w-full text-left block px-4 py-2 hover:bg-gray-400 text-indigo-400 font-medium hover:text-indigo-300"
+                className="w-full text-left block px-4 py-2 hover:themed-highlight text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Systems Programming
               </a>
@@ -95,7 +95,7 @@ export default function ProjectsList() {
             <li>
               <a
                 href="https://github.com/Jamboxman5/CSC322-Dungeon-Crawler-Game"
-                className="w-full text-left block px-4 py-2 hover:bg-gray-700 text-indigo-400 font-medium hover:text-indigo-300"
+                className="w-full text-left block px-4 py-2 hover:themed-highlight text-indigo-400 font-medium hover:text-indigo-300"
               >
                 Game Programming
               </a>

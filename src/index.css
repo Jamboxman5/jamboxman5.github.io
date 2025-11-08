@@ -63,6 +63,9 @@
   background-image: linear-gradient(to bottom, oklch(39.8% 0.195 277.366), oklch(39.8% 0.195 277.366));  
   color: #000;
 }
+[data-theme='sunrise'] .themed-highlight {
+  background-image: linear-gradient(to top, #ccc,  #ccc);  
+}
 
 
 [data-theme='night'] .themed-bg {
@@ -87,6 +90,9 @@
   background-image: linear-gradient(to top, #225, #000);  
   color: #000;
 }
+[data-theme='night'] .themed-highlight {
+  background-image: linear-gradient(to top, #333,  #333);  
+}
 
 [data-theme='sunrise'] .themed-bg {
   background-image: linear-gradient(to top left, #f2ff92, #54a9e6);
@@ -110,6 +116,9 @@
   background-image: linear-gradient(to top, oklch(56.711% 0.15029 254.254),  oklch(78.745% 0.11075 252.451));  
   color: #000;
 }
+[data-theme='sunrise'] .themed-highlight {
+  background-image: linear-gradient(to top, #ccc,  #ccc);  
+}
 
 [data-theme='sunset'] .themed-bg {
   background-image: linear-gradient(to bottom right, #4b17cf, #ff6f00);
@@ -132,6 +141,9 @@
 [data-theme='sunset'] .themed-navbar {
   background-image: linear-gradient(to bottom, oklch(40.1% 0.17 325.612), oklch(22.755% 0.10751 318.877));  
   color: #000;
+}
+[data-theme='sunset'] .themed-highlight {
+  background-image: linear-gradient(to top, #333,  #333);  
 }
 
 h1 {
