@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import NavigationBar from "../components/navbar/NavigationBar";
-import JahSkills from "../components/plugins/JahSkills";
-import WesternBounties from "../components/plugins/WesternBounties";
-import WesternHunting from "../components/plugins/WesternHunting";
-import SixPocketShop from "../components/plugins/SixPocketShop";
+import NavigationBar from "../../components/navbar/NavigationBar";
+import JahSkills from "../../components/plugins/JahSkills";
+import WesternBounties from "../../components/plugins/WesternBounties";
+import WesternHunting from "../../components/plugins/WesternHunting";
+import SixPocketShop from "../../components/plugins/SixPocketShop";
 import spigotPng from "/spigot.png";
 
 export default function SpigotPage() {

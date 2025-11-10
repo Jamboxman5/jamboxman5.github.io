@@ -7,7 +7,7 @@ import checkmate from "/checkmate.png";
 import abnpgame from "/abnpgame.png";
 import GitHubCalendar from "react-github-calendar";
 import { useTheme } from "../ThemeContext";
-
+import { Link } from "react-router-dom";
 export default function HomePage() {
   useEffect(() => {
     document.title = "Home - Sam Thompson's Portfolio";
@@ -202,15 +202,16 @@ export default function HomePage() {
                 AccommoDate
               </div>
             </a>
-            <a
-              href="https://github.com/Paul-Austin-Oswego-CSC480-HCI521/OZ-CSC-480-HCI-521-Fall-2024"
+
+            <Link
+              to="/projects/CheckMate"
               className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-purple-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"
             >
               <img src={checkmate} className="rounded-t-2xl" />
               <div className="text-gray-200 hover:text-gray-200 font-medium text-2xl text-center py-4">
                 CheckMate
               </div>
-            </a>
+            </Link>
             <a
               href="https://github.com/Jamboxman5/ABNP-Game"
               className="w-7/24 text-center bg-gradient-to-r from-purple-900 to-orange-900 mx-auto rounded-2xl transition-all duration-300 transform hover:-translate-y-3 hover:ring-2 hover:ring-white hover:ring-offset-1 shadow-md hover:shadow-xl"

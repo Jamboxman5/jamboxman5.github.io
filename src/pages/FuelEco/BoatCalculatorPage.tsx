@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import NavigationBar from "../../components/navbar/NavigationBar";
-import Entry from "../../pages/FuelEco/Entry";
+import Entry from "./Entry";
 
 export default function BoatCalculatorPage() {
   const [plateNo, setPlateNo] = useState("");
