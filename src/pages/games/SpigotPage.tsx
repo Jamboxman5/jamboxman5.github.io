@@ -5,6 +5,7 @@ import WesternBounties from "../../components/plugins/WesternBounties";
 import WesternHunting from "../../components/plugins/WesternHunting";
 import SixPocketShop from "../../components/plugins/SixPocketShop";
 import spigotPng from "/spigot.png";
+import Jahttery from "../../components/plugins/Jahttery";
 
 export default function SpigotPage() {
   useEffect(() => {
@@ -50,6 +51,7 @@ export default function SpigotPage() {
         <WesternBounties />
         <WesternHunting />
         <SixPocketShop />
+        <Jahttery />
       </div>
     </div>
   );
