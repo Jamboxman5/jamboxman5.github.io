@@ -1,6 +1,6 @@
 export default function JahSkills() {
   return (
-    <div className="mx-auto my-10 py-10 themed-element shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-7/16 lg:max-w-7/16 p-4 text-center flex flex-col">
+    <div className="mx-auto my-10 py-10 themed-element shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-6/16 p-4 text-center flex flex-col">
       <p className="text-3xl font-bold mb-4">- JahSkills -</p>
 
       <p className="text-xl font-semibold w-5/6 mx-auto flex-1 flex items-center justify-center">
