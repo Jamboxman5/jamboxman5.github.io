@@ -5,7 +5,8 @@ import accommodate from "/accommodate.png";
 import checkmate from "/checkmate.png";
 import abnpgame from "/abnpgame.png";
 import { Link } from "react-router-dom";
-import AboutMe from "../components/AboutMe";
+import AboutMe from "../components/homepage/AboutMe";
+import LiveProjects from "../components/homepage/LiveProjects";
 export default function HomePage() {
   useEffect(() => {
     document.title = "Home - Sam Thompson's Portfolio";
@@ -20,8 +21,6 @@ export default function HomePage() {
     // });
   });
 
-  const navigate = useNavigate();
-
   return (
     <div className="min-h-screen">
       <div className="w-full themed-bg pt-40 pb-40 h-full">
@@ -33,28 +32,7 @@ export default function HomePage() {
 
         <div className="flex flex-wrap mt-10">
           <AboutMe />
-
-          <div className="mx-auto my-10 py-10 themed-element shadow-lg rounded-4xl p-8 w-8/10 lg:max-w-7/16 text-center">
-            <div className="flex flex-col items-center justify-center space-y-4 h-full">
-              <p className=" text-3xl text-center font-bold">Live Projects:</p>
-
-              <button
-                onClick={() => navigate("/reacttools/fueleco")}
-                className=" w-full mt-5 bg-gradient-to-t from-indigo-800 to-indigo-800 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:from-purple-800 hover:to-indigo-800 hover:ring-2 hover:ring-white ring-offset-1"
-              >
-                Fuel Economy Calculator
-              </button>
-
-              <button
-                onClick={() =>
-                  (window.location.href = "/CSC495-AccommoDate-Interface/#/")
-                }
-                className=" w-full mt-5 bg-gradient-to-t from-indigo-800 to-indigo-800 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:from-purple-800 hover:to-indigo-800 hover:ring-2 hover:ring-white ring-offset-1"
-              >
-                AccommoDate
-              </button>
-            </div>
-          </div>
+          <LiveProjects />
         </div>
 
         <div className="w-full bg-gray-900 mt-20">

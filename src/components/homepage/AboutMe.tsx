@@ -1,6 +1,6 @@
 import mePNG from "/me.png";
 import GitHubCalendar from "react-github-calendar";
-import { useTheme } from "../ThemeContext";
+import { useTheme } from "../../ThemeContext";
 
 export default function AboutMe() {
   const { theme } = useTheme();
