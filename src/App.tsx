@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import "./tailwind.css";
 import SpigotPage from "./pages/games/SpigotPage";
-import BoatCalculatorPage from "./pages/fueleco/BoatCalculatorPage";
+import BoatCalculatorPage from "./pages/fueltracker/BoatCalculatorPage";
 import CSC495 from "./pages/coursework/CSC495";
 import CheckMate from "./pages/projects/CheckMate";
 
